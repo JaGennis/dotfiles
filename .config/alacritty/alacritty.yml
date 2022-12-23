@@ -1,0 +1,14 @@
+font:
+  normal:
+    family: Hack Nerd Font
+    # family: TerminessTTF Nerd Font
+  size: 13
+
+window:
+  opacity: 0.90
+
+import:
+  - $XDG_CONFIG_HOME/alacritty/one-dark.yaml
+
+key_bindings:
+    - { key: Space, mods: Control, chars: "\x00" }
