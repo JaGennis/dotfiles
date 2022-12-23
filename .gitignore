@@ -1,0 +1,14 @@
+*
+!.config/
+!.config/alacritty/
+!.config/alacritty/*
+!.config/nvim/
+!.config/nvim/*
+!.config/nvim/after/ftplugin/
+!.config/nvim/after/ftplugin/*
+!.config/nvim/lua/user/
+!.config/nvim/lua/user/*
+!.config/tmux/
+!.config/tmux/*
+!.gitignore
+!.zprofile
