@@ -28,7 +28,7 @@ vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } e
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('neodev').setup()
 local lspconfig = require('lspconfig')
-lspconfig.sumneko_lua.setup { capabilities = capabilities }
+lspconfig.lua_ls.setup { capabilities = capabilities }
 lspconfig.omnisharp.setup {
     capabilities = capabilities,
     enable_roslyn_analyzers = true,
@@ -41,31 +41,11 @@ lspconfig.angularls.setup { capabilities = capabilities }
 lspconfig.jsonls.setup { capabilities = capabilities }
 lspconfig.yamlls.setup { capabilities = capabilities }
 lspconfig.html.setup { capabilities = capabilities }
+lspconfig.cssls.setup { capabilities = capabilities }
+lspconfig.rust_analyzer.setup { capabilities = capabilities }
 
 
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-local cmp = require('cmp')
-cmp.setup({
-    snippet = {
-        expand = function(args)
-            vim.fn["vsnip#anonymous"](args.body)
-        end,
-    },
-    sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'vsnip' },
-        { name = 'path' },
-        { name = 'buffer' },
-        { name = 'calc' },
-    }),
-    mapping = cmp.mapping.preset.insert({
-        ['<Tab>'] = cmp.mapping.select_next_item(),
-        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-u>'] = cmp.mapping.scroll_docs(4),
-    })
-})
 
 vim.diagnostic.config({
     virtual_text = false

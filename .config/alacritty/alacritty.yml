@@ -10,5 +10,5 @@ window:
 import:
   - $XDG_CONFIG_HOME/alacritty/one-dark.yaml
 
-key_bindings:
-    - { key: Space, mods: Control, chars: "\x00" }
+    # key_bindings:
+    # - { key: Space, mods: Control, chars: "\x00" }
