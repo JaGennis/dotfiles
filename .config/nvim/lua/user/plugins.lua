@@ -194,9 +194,10 @@ require('packer').startup(function(use)
         end,
         config = function()
             require('nvim-treesitter.configs').setup{
+                ensure_installed = { "markdown", "markdown_inline"},
                 highlight = {enable=true, disable = {"gitcommit"},},
                 sync_install = true,
-                -- auto_install = true,
+                auto_install = true,
             }
         end
     }
