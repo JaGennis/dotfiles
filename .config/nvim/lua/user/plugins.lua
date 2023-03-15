@@ -208,6 +208,12 @@ require('packer').startup(function(use)
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' },
         config = function()
+            local function open_tab_silent(node)
+                local api = require("nvim-tree.api")
+
+                api.node.open.tab(node)
+                vim.cmd.tabprev()
+            end
             vim.keymap.set('n', '<Leader>n', ':NvimTreeFindFileToggle<CR>')
             require('nvim-tree').setup({
                 -- open_on_setup = true,
@@ -217,7 +223,7 @@ require('packer').startup(function(use)
                         list = {
                             { key = "J", action = "" },
                             { key = "K", action = "" },
-                            { key = "T", action = "tabnew" },
+                            { key = "T", action = "open_tab_silent", action_cb = open_tab_silent },
                         },
                     },
                 }
