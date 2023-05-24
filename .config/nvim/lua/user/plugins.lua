@@ -129,8 +129,8 @@ require('packer').startup(function(use)
             vim.keymap.set('n', '<leader>d', "<cmd>Lspsaga show_cursor_diagnostics<CR>", {})
             vim.keymap.set('n', '<leader>rn', "<cmd>Lspsaga rename<CR>", {})
 
-            -- vim.keymap.set("n", "<leader>pk", "<cmd>Lspsaga peek_definition<CR>", {})
-            vim.keymap.set("n","<leader>o", "<cmd>Lspsaga outline<CR>",{})
+            -- vim.keymap.set("n", "<leader>pd", "<cmd>Lspsaga peek_definition<CR>", {})
+            vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", {})
 
             -- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua require'lspsaga.diagnostic'.show_cursor_diagnostics()]]
         end
@@ -171,9 +171,9 @@ require('packer').startup(function(use)
                     local gs = package.loaded.gitsigns
 
                     local function map(mode, l, r, opts)
-                      opts = opts or {}
-                      opts.buffer = bufnr
-                      vim.keymap.set(mode, l, r, opts)
+                        opts = opts or {}
+                        opts.buffer = bufnr
+                        vim.keymap.set(mode, l, r, opts)
                     end
 
                     -- Navigation
@@ -181,20 +181,20 @@ require('packer').startup(function(use)
                     map('n', '[h', gs.prev_hunk)
 
                     -- Actions
-                    map({'n', 'v'}, '<leader>hs', ':Gitsigns stage_hunk<CR>')
-                    map({'n', 'v'}, '<leader>hr', ':Gitsigns reset_hunk<CR>')
+                    map({ 'n', 'v' }, '<leader>hs', ':Gitsigns stage_hunk<CR>')
+                    map({ 'n', 'v' }, '<leader>hr', ':Gitsigns reset_hunk<CR>')
                     map('n', '<leader>hS', gs.stage_buffer)
                     map('n', '<leader>hu', gs.undo_stage_hunk)
                     map('n', '<leader>hR', gs.reset_buffer)
                     map('n', '<leader>hp', gs.preview_hunk)
-                    map('n', '<leader>hb', function() gs.blame_line{full=true} end)
+                    map('n', '<leader>hb', function() gs.blame_line { full = true } end)
                     map('n', '<leader>tb', gs.toggle_current_line_blame)
                     map('n', '<leader>hd', gs.diffthis)
                     map('n', '<leader>hD', function() gs.diffthis('~') end)
                     map('n', '<leader>td', gs.toggle_deleted)
 
                     -- Text object
-                    map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+                    map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
                 end
             })
         end
@@ -211,9 +211,9 @@ require('packer').startup(function(use)
             require('nvim-treesitter.install').update({ with_sync = true })()
         end,
         config = function()
-            require('nvim-treesitter.configs').setup{
-                ensure_installed = { "markdown", "markdown_inline"},
-                highlight = {enable=true, disable = {"gitcommit"},},
+            require('nvim-treesitter.configs').setup {
+                ensure_installed = { "markdown", "markdown_inline", "vim" },
+                highlight = { enable = true, disable = { "gitcommit" }, },
                 sync_install = true,
                 auto_install = true,
             }
@@ -256,7 +256,7 @@ require('packer').startup(function(use)
             local custom_onedark = require('lualine.themes.onedark')
             custom_onedark.insert.a, custom_onedark.normal.a =
                 original_onedark.normal.a, original_onedark.insert.a
-            require('lualine').setup{
+            require('lualine').setup {
                 options = { theme = custom_onedark }
             }
         end
@@ -324,7 +324,7 @@ require('packer').startup(function(use)
 
             vim.opt.list = true
             vim.opt.listchars:append "space:⋅"
-            require("indent_blankline").setup{
+            require("indent_blankline").setup {
                 space_char_blankline = " ",
                 show_current_context_start = true,
                 char_highlight_list = {
