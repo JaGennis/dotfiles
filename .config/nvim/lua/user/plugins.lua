@@ -226,27 +226,27 @@ require('packer').startup(function(use)
     use {
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            local function open_tab_silent(node)
-                local api = require("nvim-tree.api")
-
-                api.node.open.tab(node)
-                vim.cmd.tabprev()
-            end
+        setup = function ()
             vim.keymap.set('n', '<Leader>n', ':NvimTreeFindFileToggle<CR>')
-            require('nvim-tree').setup({
-                -- open_on_setup = true,
-                view = {
-                    adaptive_size = true,
-                    mappings = {
-                        list = {
-                            { key = "J", action = "" },
-                            { key = "K", action = "" },
-                            { key = "T", action = "open_tab_silent", action_cb = open_tab_silent },
-                        },
-                    },
-                }
-            })
+        end,
+        config = function()
+            local function on_attach(bufnr)
+                local api = require('nvim-tree.api')
+                local function opts(desc)
+                    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+                end
+
+                api.config.mappings.default_on_attach(bufnr)
+                vim.keymap.del('n', 'J', { buffer = bufnr })
+                vim.keymap.del('n', 'K', { buffer = bufnr })
+                vim.keymap.set('n', 'T', function()
+                    local node = api.tree.get_node_under_cursor()
+                    api.node.open.tab(node)
+                    vim.cmd.tabprev()
+                end, opts('open_tab_silent'))
+            end
+
+            require('nvim-tree').setup({on_attach = on_attach})
         end
     }
     use {
