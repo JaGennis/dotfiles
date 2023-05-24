@@ -19,32 +19,6 @@ vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } e
 --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 -- end, opts)
 
--- local on_attach = function(client, bufnr)
-    -- Enable completion triggered by <c-x><c-o>
-    -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-    -- local bufopts = { noremap=true, silent=true, buffer=bufnr }
--- end
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require('neodev').setup()
-local lspconfig = require('lspconfig')
-lspconfig.lua_ls.setup { capabilities = capabilities }
-lspconfig.omnisharp.setup {
-    capabilities = capabilities,
-    enable_roslyn_analyzers = true,
-    root_dir = lspconfig.util.root_pattern('*.sln'),
-    cmd = {"/Users/jannis.geuppert/.local/share/nvim/mason/bin/omnisharp"}
-    -- enable_ms_build_load_projects_on_demand = true,
-}
-lspconfig.tsserver.setup { capabilities = capabilities }
-lspconfig.angularls.setup { capabilities = capabilities }
-lspconfig.jsonls.setup { capabilities = capabilities }
-lspconfig.yamlls.setup { capabilities = capabilities }
-lspconfig.html.setup { capabilities = capabilities }
-lspconfig.cssls.setup { capabilities = capabilities }
-lspconfig.rust_analyzer.setup { capabilities = capabilities }
-
-
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 vim.diagnostic.config({
