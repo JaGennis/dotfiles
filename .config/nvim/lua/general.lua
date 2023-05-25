@@ -11,8 +11,6 @@ vim.opt.shiftwidth = 4
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- vim.opt.filetype = true
-
 -- Remove trailing white space when saving
 vim.cmd([[
     autocmd BufWritePre * %s/\s\+$//e

@@ -4,10 +4,12 @@
 !.config/alacritty/*
 !.config/nvim/
 !.config/nvim/*
-!.config/nvim/after/ftplugin/
-!.config/nvim/after/ftplugin/*
-!.config/nvim/lua/user/
-!.config/nvim/lua/user/*
+.config/nvim/lazy-lock.json
+!.config/nvim/lua/
+!.config/nvim/lua/*
+.config/nvim/lua/.luarc.json
+!.config/nvim/lua/plugins/
+!.config/nvim/lua/plugins/*
 !.config/tmux/
 !.config/tmux/*
 !.gitignore
