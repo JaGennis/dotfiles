@@ -1,6 +1,6 @@
 local plugin = {
     'nvim-tree/nvim-tree.lua',
-    requires = { 'nvim-tree/nvim-web-devicons' },
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     init = function ()
         vim.keymap.set('n', '<Leader>n', ':NvimTreeFindFileToggle<CR>')
     end,
