@@ -24,8 +24,8 @@ local plugin = {
         vim.keymap.set('n', '[d', "<cmd>Lspsaga diagnostic_jump_prev<CR>", {})
         vim.keymap.set('n', '<leader>d', "<cmd>Lspsaga show_cursor_diagnostics<CR>", {})
         vim.keymap.set('n', '<leader>rn', "<cmd>Lspsaga rename<CR>", {})
-
-        -- vim.keymap.set("n", "<leader>pd", "<cmd>Lspsaga peek_definition<CR>", {})
+        vim.keymap.set("n", "<leader>pd", "<cmd>Lspsaga peek_definition<CR>", {})
+        vim.keymap.set("n", "<leader>pt", "<cmd>Lspsaga peek_type_definition<CR>", {})
         vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", {})
 
         -- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua require'lspsaga.diagnostic'.show_cursor_diagnostics()]]
