@@ -1,7 +1,7 @@
 local plugin = {
     'nvim-tree/nvim-tree.lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    init = function ()
+    init = function()
         vim.keymap.set('n', '<Leader>n', ':NvimTreeFindFileToggle<CR>')
     end,
     config = function()
@@ -12,6 +12,7 @@ local plugin = {
             end
 
             api.config.mappings.default_on_attach(bufnr)
+            vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<CR>')
             vim.keymap.del('n', 'J', { buffer = bufnr })
             vim.keymap.del('n', 'K', { buffer = bufnr })
             vim.keymap.set('n', 'T', function()
@@ -21,7 +22,7 @@ local plugin = {
             end, opts('open_tab_silent'))
         end
 
-        require('nvim-tree').setup({on_attach = on_attach})
+        require('nvim-tree').setup({ on_attach = on_attach, view = { adaptive_size = true } })
     end
 }
 
