@@ -22,7 +22,7 @@ local plugin = {
             end, opts('open_tab_silent'))
         end
 
-        require('nvim-tree').setup({ on_attach = on_attach, view = { adaptive_size = true } })
+        require('nvim-tree').setup({ on_attach = on_attach, view = { adaptive_size = true, centralize_selection = true } })
     end
 }
 
