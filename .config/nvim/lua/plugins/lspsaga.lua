@@ -7,6 +7,9 @@ local plugin = {
     branch = "main",
     config = function()
         require('lspsaga').setup({
+            lightbulb = {
+                enable = false,
+            },
             code_action = {
                 keys = {
                     exec = '<CR>',
