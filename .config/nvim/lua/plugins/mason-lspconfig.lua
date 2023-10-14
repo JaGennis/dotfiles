@@ -6,16 +6,9 @@ local plugin = {
     },
     config = function()
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        require('neodev').setup()
+        -- require('neodev').setup()
         local lspconfig = require('lspconfig')
         lspconfig.lua_ls.setup { capabilities = capabilities }
-        lspconfig.omnisharp.setup {
-            capabilities = capabilities,
-            enable_roslyn_analyzers = true,
-            root_dir = lspconfig.util.root_pattern('*.sln'),
-            cmd = { "/Users/jannis.geuppert/.local/share/nvim/mason/bin/omnisharp" }
-            -- enable_ms_build_load_projects_on_demand = true,
-        }
         lspconfig.tsserver.setup { capabilities = capabilities }
         lspconfig.eslint.setup { capabilities = capabilities }
         lspconfig.angularls.setup { capabilities = capabilities }
@@ -24,6 +17,9 @@ local plugin = {
         lspconfig.html.setup { capabilities = capabilities }
         lspconfig.cssls.setup { capabilities = capabilities }
         lspconfig.rust_analyzer.setup { capabilities = capabilities }
+        lspconfig.clangd.setup { capabilities = capabilities }
+        lspconfig.qmlls.setup{ capabilities = capabilities }
+        lspconfig.hls.setup{ capabilities = capabilities }
         require('mason').setup()
         require('mason-lspconfig').setup({
             automatic_installation = true
