@@ -12,7 +12,6 @@ local plugin = {
             end
 
             api.config.mappings.default_on_attach(bufnr)
-            vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<CR>')
             vim.keymap.del('n', 'J', { buffer = bufnr })
             vim.keymap.del('n', 'K', { buffer = bufnr })
             vim.keymap.set('n', 'T', function()
