@@ -19,7 +19,6 @@ local plugin = {
                 'RainbowDelimiterViolet',
                 'RainbowDelimiterCyan',
             },
-            blacklist = { 'c', 'cpp' },
         }
     end
 }
