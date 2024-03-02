@@ -25,6 +25,8 @@ export HISTFILE=$ZDOTDIR/zsh_history
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 export CLICOLOR=1
+
+if [[ -f "/opt/homebrew/bin/brew" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
