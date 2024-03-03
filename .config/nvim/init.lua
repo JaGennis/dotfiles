@@ -1,5 +1,3 @@
-vim.g.mapleader = ' '
-vim.opt.termguicolors = true
 
 function dbg(arg)
     print(vim.inspect(arg))
@@ -19,5 +17,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup('plugins')
 require('general')
+require('lazy').setup('plugins')

@@ -16,9 +16,7 @@ vim.cmd([[
     autocmd BufWritePre * %s/\s\+$//e
 ]])
 
--- Hm?
 vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 vim.keymap.set('n', 'J', ':tabp<CR>')
 vim.keymap.set('n', 'K', ':tabn<CR>')
 vim.keymap.set('n', '<C-h>', '<C-W>h')
