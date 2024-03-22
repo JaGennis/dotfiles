@@ -4,6 +4,7 @@ local plugin = {
         "nvim-tree/nvim-web-devicons",
         "nvim-treesitter/nvim-treesitter"
     },
+    event = "LspAttach",
     branch = "main",
     keys = {
         {"<leader>lf", "<cmd>Lspsaga lsp_finder<cr>"},
