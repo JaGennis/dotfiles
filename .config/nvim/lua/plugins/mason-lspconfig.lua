@@ -6,14 +6,13 @@ local plugin = {
     },
     lazy = false,
     keys = {
-        {"<C-k>", vim.lsp.buf.signature_help },
-        {"leader>f", function() vim.lsp.buf.format { async = true } end },
-        {"<leader>q", vim.diagnostic.setloclist },
-        {'gD', vim.lsp.buf.declaration },
-        {'gd', vim.lsp.buf.definition },
-        {'gi', vim.lsp.buf.implementation },
-        {'gt', vim.lsp.buf.type_definition },
-        {'gr', vim.lsp.buf.references },
+        {"<leader>fo", function() vim.lsp.buf.format { async = true } end, desc = "Format buffer" },
+        {"<leader>q", vim.diagnostic.setloclist, desc = "Show diagnostics" },
+        {'gD', vim.lsp.buf.declaration, desc = "Go to declaration"},
+        {'gd', vim.lsp.buf.definition, desc = "Go to definition" },
+        {'gi', vim.lsp.buf.implementation, desc = "Go to implementation" },
+        {'gt', vim.lsp.buf.type_definition, desc = "Go to type definition" },
+        {'gr', vim.lsp.buf.references, desc = "Go to references" },
     },
     config = function()
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
