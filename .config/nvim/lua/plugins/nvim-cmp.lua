@@ -7,6 +7,7 @@ local plugin = {
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-calc',
     },
+    commit = "b356f2c",
     config = function()
         local cmp = require('cmp')
         cmp.setup({
