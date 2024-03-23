@@ -24,6 +24,7 @@ vim.keymap.set('n', '<C-l>', '<C-W>l')
 vim.keymap.set('n', '<Leader>rr', ':luafile %<CR>')
 vim.keymap.set('n', 'n', 'nzz')
 vim.keymap.set('n', 'N', 'Nzz')
+vim.keymap.set('c', 'w!!', "silent! write ! doas tee % > /dev/null", { silent = true })
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
