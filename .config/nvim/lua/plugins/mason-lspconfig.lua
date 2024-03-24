@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'williamboman/mason-lspconfig.nvim',
     dependencies = {
         'neovim/nvim-lspconfig',
@@ -42,5 +42,3 @@ local plugin = {
         })
     end
 }
-
-return plugin

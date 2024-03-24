@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'nvim-tree/nvim-tree.lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     keys = {
@@ -24,5 +24,3 @@ local plugin = {
         require('nvim-tree').setup({ on_attach = on_attach, view = { adaptive_size = true, centralize_selection = true } })
     end
 }
-
-return plugin

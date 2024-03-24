@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'glepnir/lspsaga.nvim',
     requires = {
         "nvim-tree/nvim-web-devicons",
@@ -37,5 +37,3 @@ local plugin = {
         -- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua require'lspsaga.diagnostic'.show_cursor_diagnostics()]]
     end
 }
-
-return plugin

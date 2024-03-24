@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'nvim-lualine/lualine.nvim',
     config = function()
         local original_onedark = require('lualine.themes.onedark')
@@ -10,5 +10,3 @@ local plugin = {
         }
     end
 }
-
-return plugin

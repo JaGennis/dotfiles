@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'nvim-treesitter/nvim-treesitter',
     run = function()
         require('nvim-treesitter.install').update({ with_sync = true })()
@@ -12,5 +12,3 @@ local plugin = {
         }
     end
 }
-
-return plugin

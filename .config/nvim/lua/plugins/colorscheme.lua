@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'navarasu/onedark.nvim',
     config = function()
         require('onedark').setup({
@@ -7,5 +7,3 @@ local plugin = {
         require('onedark').load()
     end
 }
-
-return plugin

@@ -1,4 +1,4 @@
-local plugin = {
+return {
     "ggandor/leap.nvim",
     lazy = false,
     config = function()
@@ -6,5 +6,3 @@ local plugin = {
         require('leap').create_default_mappings()
     end,
 }
-
-return plugin

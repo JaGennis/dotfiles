@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'lukas-reineke/indent-blankline.nvim',
     main = "ibl",
     dependencies = { "HiPhish/rainbow-delimiters.nvim" },
@@ -35,5 +35,3 @@ local plugin = {
         hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
     end
 }
-
-return plugin

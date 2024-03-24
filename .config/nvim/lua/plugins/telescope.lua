@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'nvim-telescope/telescope.nvim',
     dependencies = {
         'nvim-lua/plenary.nvim',
@@ -22,5 +22,3 @@ local plugin = {
         })
     end
 }
-
-return plugin

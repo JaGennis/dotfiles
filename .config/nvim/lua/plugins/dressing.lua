@@ -1,5 +1,3 @@
-local plugin = {
+return {
     'stevearc/dressing.nvim'
 }
-
-return plugin

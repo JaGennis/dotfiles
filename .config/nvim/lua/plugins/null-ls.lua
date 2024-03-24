@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'jose-elias-alvarez/null-ls.nvim',
     config = function()
         local null_ls = require("null-ls")
@@ -10,5 +10,3 @@ local plugin = {
         })
     end
 }
-
-return plugin

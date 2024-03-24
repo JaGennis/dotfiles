@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'lewis6991/gitsigns.nvim',
     event = "VeryLazy",
     keys = {
@@ -20,5 +20,3 @@ local plugin = {
         require('gitsigns').setup()
     end
 }
-
-return plugin

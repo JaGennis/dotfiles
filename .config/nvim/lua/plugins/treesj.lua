@@ -1,4 +1,4 @@
-local plugin = {
+return {
     'Wansmer/treesj',
     keys = {
         {"<leader>tt", "<cmd>TSJToggle<cr>", desc = "Split or join node under cursor"},
@@ -11,5 +11,3 @@ local plugin = {
       require("treesj").setup()
     end,
 }
-
-return plugin

@@ -1,4 +1,4 @@
-local plugin = {
+return {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -26,5 +26,3 @@ local plugin = {
         require("harpoon").setup()
     end
 }
-
-return plugin
