@@ -4,10 +4,10 @@ local plugin = {
         'nvim-lua/plenary.nvim',
     },
     keys = {
-        {"<leader>ff", "<cmd>Telescope find_files<cr>"},
-        {"<leader>lg", "<cmd>Telescope live_grep<cr>"},
-        {"<leader>ts", "<cmd>Telescope treesitter<cr>"},
-        {"<leader>gr", "<cmd>Telescope lsp_references<cr>"},
+        {"<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files"},
+        {"<leader>lg", "<cmd>Telescope live_grep<cr>", desc = "Live grep"},
+        {"<leader>ts", "<cmd>Telescope treesitter<cr>", desc = "Open Treesitter"},
+        {"<leader>gr", "<cmd>Telescope lsp_references<cr>", desc = "Open LSP references"},
     },
     config = function()
         local actions = require("telescope.actions")

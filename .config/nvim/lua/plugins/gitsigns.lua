@@ -1,37 +1,23 @@
 local plugin = {
     'lewis6991/gitsigns.nvim',
+    event = "VeryLazy",
+    keys = {
+        {"]h", "<cmd>Gitsigns next_hunk<cr>", desc = "Jump to next hunk"},
+        {"[h", "<cmd>Gitsigns prev_hunk<cr>", desc = "Jump to previous hunk"},
+        {"<leader>hs", "<cmd>Gitsigns stage_hunk<cr>", desc = "Stage hunk"},
+        {"<leader>hu", "<cmd>Gitsigns undo_stage_hunk<cr>", desc = "Undo stage hunk"},
+        {"<leader>hr", "<cmd>Gitsigns reset_hunk<cr>", desc = "Reset hunk"},
+        {"<leader>hp", "<cmd>Gitsigns preview_hunk<cr>", desc = "Preview hunk"},
+        {"<leader>hS", "<cmd>Gitsigns stage_buffer<cr>", desc = "Stage buffer"},
+        {"<leader>hR", "<cmd>Gitsigns reset_buffer<cr>", desc = "Reset buffer"},
+        {"<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Toggle current line blame"},
+        {"<leader>hb", "<cmd>Gitsigns blame_line<cr>", desc = "Blame current line"},
+        {"<leader>hd", "<cmd>Gitsigns diffthis<cr>", desc = "Diff current buffer"},
+        {"<leader>td", "<cmd>Gitsigns toggle_deleted<cr>", desc = "Toggle deleted"},
+        {"ih", "<cmd>Gitsigns select_hunk<cr>", mode = {"o", "x"}, desc = "Select hunk"}
+    },
     config = function()
-        require('gitsigns').setup({
-            on_attach = function(bufnr)
-                local gs = package.loaded.gitsigns
-
-                local function map(mode, l, r, opts)
-                    opts = opts or {}
-                    opts.buffer = bufnr
-                    vim.keymap.set(mode, l, r, opts)
-                end
-
-                -- Navigation
-                map('n', ']h', gs.next_hunk)
-                map('n', '[h', gs.prev_hunk)
-
-                -- Actions
-                map({ 'n', 'v' }, '<leader>hs', ':Gitsigns stage_hunk<CR>')
-                map({ 'n', 'v' }, '<leader>hr', ':Gitsigns reset_hunk<CR>')
-                map('n', '<leader>hS', gs.stage_buffer)
-                map('n', '<leader>hu', gs.undo_stage_hunk)
-                map('n', '<leader>hR', gs.reset_buffer)
-                map('n', '<leader>hp', gs.preview_hunk)
-                map('n', '<leader>hb', function() gs.blame_line { full = true } end)
-                map('n', '<leader>tb', gs.toggle_current_line_blame)
-                map('n', '<leader>hd', gs.diffthis)
-                map('n', '<leader>hD', function() gs.diffthis('~') end)
-                map('n', '<leader>td', gs.toggle_deleted)
-
-                -- Text object
-                map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
-            end
-        })
+        require('gitsigns').setup()
     end
 }
 

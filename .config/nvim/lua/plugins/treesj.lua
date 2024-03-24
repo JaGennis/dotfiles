@@ -1,10 +1,11 @@
 local plugin = {
     'Wansmer/treesj',
     keys = {
-        {"<leader>sj", "<cmd>TSJToggle<cr>"},
-        {"<leader>jo", "<cmd>TSJJoin<cr>"},
-        {"<leader>sp", "<cmd>TSJSplit<cr>"},
+        {"<leader>tt", "<cmd>TSJToggle<cr>", desc = "Split or join node under cursor"},
+        {"<leader>jj", "<cmd>TSJJoin<cr>", desc = "Join node under cursor"},
+        {"<leader>ss", "<cmd>TSJSplit<cr>", desc = "Split node under cursor"},
     },
+    event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
       require("treesj").setup()
