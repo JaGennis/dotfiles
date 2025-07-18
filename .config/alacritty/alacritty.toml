@@ -1,0 +1,11 @@
+[font]
+size = 13
+
+[font.normal]
+family = "Hack Nerd Font"
+
+[window]
+opacity = 0.9
+
+[general]
+import = ["$XDG_CONFIG_HOME/alacritty/one-dark.yaml"]
