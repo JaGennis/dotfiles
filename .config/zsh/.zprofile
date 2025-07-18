@@ -18,8 +18,6 @@ export XDG_MUSIC_DIR=$HOME/audio/music
 export XDG_PICTURES_DIR=$HOME/pix
 export XDG_VIDEOS_DIR=$HOME/vids
 
-declare -A ZINIT
-export ZINIT[HOME_DIR]="$XDG_CONFIG_HOME/zinit"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE=$ZDOTDIR/zsh_history
 export HISTSIZE=100000
@@ -29,4 +27,8 @@ export CLICOLOR=1
 
 if [[ -f "/opt/homebrew/bin/brew" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+if [[ -f $XDG_CONFIG_HOME/aliasrc.sh ]]; then
+    source $XDG_CONFIG_HOME/aliasrc.sh
 fi

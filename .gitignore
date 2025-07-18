@@ -15,4 +15,6 @@
 !.config/tmux/*
 !.gitignore
 !.zprofile
-
+!.config/zsh/
+!.config/zsh/.zshrc
+!.config/zsh/.zprofile
