@@ -2,7 +2,7 @@ return {
     'nvim-tree/nvim-tree.lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     keys = {
-        {"<leader>n", "<cmd>NvimTreeFindFileToggle<cr>"},
+        {"<leader>n", "<cmd>NvimTreeFindFileToggle<cr>", desc = "Open nvim tree"},
     },
     config = function()
         local function on_attach(bufnr)
