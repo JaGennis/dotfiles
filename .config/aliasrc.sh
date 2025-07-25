@@ -1,6 +1,6 @@
 alias g="git"
 alias ga="git add"
-alias gc="git commit"
+alias gc="git commit -v"
 alias gd="git diff"
 alias gl="git pull"
 alias glg="git log"

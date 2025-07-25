@@ -15,6 +15,7 @@
 !.config/tmux/*
 !.gitignore
 !.zprofile
+!.config/aliasrc.sh
 !.config/zsh/
 !.config/zsh/.zshrc
 !.config/zsh/.zprofile
