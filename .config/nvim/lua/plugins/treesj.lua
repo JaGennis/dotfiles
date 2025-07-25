@@ -1,13 +1,15 @@
 return {
     'Wansmer/treesj',
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     keys = {
         {"<leader>tt", "<cmd>TSJToggle<cr>", desc = "Split or join node under cursor"},
-        {"<leader>jj", "<cmd>TSJJoin<cr>", desc = "Join node under cursor"},
-        {"<leader>ss", "<cmd>TSJSplit<cr>", desc = "Split node under cursor"},
+        -- {"<leader>tj", "<cmd>TSJJoin<cr>", desc = "Join node under cursor"},
+        -- {"<leader>ts", "<cmd>TSJSplit<cr>", desc = "Split node under cursor"},
     },
     event = "VeryLazy",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
-      require("treesj").setup()
+      require("treesj").setup({
+          use_default_keymaps = false,
+      })
     end,
 }
