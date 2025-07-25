@@ -19,8 +19,8 @@ return {
                 sorter = conf.generic_sorter({}),
             }):find()
         end, desc = "Open harpoon list"},
-        {"<leader>ha", function() require("harpoon"):list():append() end, desc = "Append to harpoon list"},
-        {"<leader>hx", function() require("harpoon"):list():remove() end, desc = "Append to harpoon list"},
+        {"<leader>ha", function() require("harpoon"):list():add() end, desc = "Append to harpoon list"},
+        {"<leader>hx", function() require("harpoon"):list():remove() end, desc = "Remove from harpoon list"},
     },
     config = function()
         require("harpoon").setup()
