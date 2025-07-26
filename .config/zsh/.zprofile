@@ -24,11 +24,3 @@ export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 
 export CLICOLOR=1
-
-if [[ -f "/opt/homebrew/bin/brew" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
-if [[ -f $XDG_CONFIG_HOME/aliasrc.sh ]]; then
-    source $XDG_CONFIG_HOME/aliasrc.sh
-fi

@@ -44,3 +44,6 @@ setopt auto_cd # cd by typing directory name if it's not a command
 # setopt auto_menu # automatically use menu completion
 setopt always_to_end # move cursor to end if word had one match
 setopt hist_ignore_space # ignore entries preceded by a space
+
+[[ ! -f "/opt/homebrew/bin/brew" ]] || eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ ! -f $XDG_CONFIG_HOME/aliasrc.sh ]] || source $XDG_CONFIG_HOME/aliasrc.sh
