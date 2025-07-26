@@ -25,10 +25,14 @@ fi
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
 zinit load jeffreytse/zsh-vi-mode
-zinit load marlonrichert/zsh-autocomplete
 zinit load zsh-users/zsh-syntax-highlighting
+
 zinit load zsh-users/zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
+
+zinit load marlonrichert/zsh-autocomplete
+bindkey "^I" menu-complete
+bindkey "$terminfo[kcbt]" reverse-menu-complete
 
 # setopt hist_ignore_all_dups # remove older duplicate entries from history
 setopt hist_reduce_blanks # remove superfluous blanks from history items
