@@ -24,3 +24,5 @@ export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 
 export CLICOLOR=1
+
+export PYTHON_HISTORY=$XDG_DATA_HOME/python_history
