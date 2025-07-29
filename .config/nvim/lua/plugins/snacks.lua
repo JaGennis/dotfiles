@@ -8,7 +8,8 @@ return {
                     hidden = true
                 }
             }
-        }
+        },
+        words = { enabled = true },
     },
     keys = {
         { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer"},
@@ -46,5 +47,9 @@ return {
         { "gt", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto Type Definition" },
         { "<leader>ls", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
         { "<leader>ws", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
+
+        -- words
+        { "]r", function() Snacks.words.jump(1, true) end, desc = "Jump to next reference" },
+        { "[r", function() Snacks.words.jump(-1, true) end, desc = "Jump to next reference" },
     }
 }
