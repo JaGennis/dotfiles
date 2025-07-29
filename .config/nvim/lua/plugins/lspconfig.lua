@@ -1,10 +1,8 @@
 return {
   'neovim/nvim-lspconfig',
   dependencies = {
-      -- 'saghen/blink.cmp',
       'mason-org/mason-lspconfig.nvim',
       'mason-org/mason.nvim',
-      'folke/neodev.nvim',
   },
   keys = {
       {"<leader>fo", function() vim.lsp.buf.format { async = true } end, desc = "Format buffer" },
@@ -24,7 +22,6 @@ return {
     }
   },
   config = function(_, opts)
-    require("neodev").setup()
     local lspconfig = require('lspconfig')
     for server, config in pairs(opts.servers) do
       config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
