@@ -2,8 +2,12 @@ return {
     "folke/snacks.nvim",
     lazy = false,
     opts = {
-        explorer = {
-            hidden = true
+        picker = {
+            sources = {
+                explorer = {
+                    hidden = true
+                }
+            }
         }
     },
     keys = {
