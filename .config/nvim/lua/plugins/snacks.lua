@@ -1,17 +1,9 @@
 return {
     "folke/snacks.nvim",
     lazy = false,
-    opts = {
-        picker = {
-            sources = {
-                explorer = {
-                    hidden = true
-                }
-            }
-        }
-    },
+    opts = {},
     keys = {
-        { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer"},
+        { "<leader>e", function() Snacks.explorer({ hidden = true }) end, desc = "File Explorer"},
         { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History"},
         { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep"},
         { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History"},
