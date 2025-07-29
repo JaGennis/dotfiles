@@ -28,6 +28,7 @@ return {
         { "<leader>db", function() Snacks.picker.diagnostics_buffer() end, desc = "Diagnostics Buffer"},
         { "<leader>ic", function() Snacks.picker.icons() end, desc = "Icons"},
         { "<leader>uh", function() Snacks.picker.undo() end, desc = "Undo History"},
+        { "<leader>la", function() Snacks.picker.lazy() end, desc = "Search for Plugin Spec"},
 
         -- git
         { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff"},
