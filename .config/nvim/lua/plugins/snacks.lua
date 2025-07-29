@@ -31,12 +31,12 @@ return {
         { "<leader>la", function() Snacks.picker.lazy() end, desc = "Search for Plugin Spec"},
 
         -- git
-        { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff"},
-        { "<leader>gst", function() Snacks.picker.git_status() end, desc = "Git Status"},
-        { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches"},
-        { "<leader>glg", function() Snacks.picker.git_log() end, desc = "Git Log"},
-        { "<leader>gll", function() Snacks.picker.git_log_line() end, desc = "Git Log Line"},
-        { "<leader>glf", function() Snacks.picker.git_log_file() end, desc = "Git Log File"},
+        { "<leader>gd",  function() Snacks.picker.git_diff    ({ focus = 'list' }) end, desc = "Git Diff"},
+        { "<leader>gst", function() Snacks.picker.git_status  ({ focus = 'list' }) end, desc = "Git Status"},
+        { "<leader>gb",  function() Snacks.picker.git_branches({ focus = 'list' }) end, desc = "Git Branches"},
+        { "<leader>glg", function() Snacks.picker.git_log     ({ focus = 'list' }) end, desc = "Git Log"},
+        { "<leader>gll", function() Snacks.picker.git_log_line({ focus = 'list' }) end, desc = "Git Log Line"},
+        { "<leader>glf", function() Snacks.picker.git_log_file({ focus = 'list' }) end, desc = "Git Log File"},
 
         -- LSP
         { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
