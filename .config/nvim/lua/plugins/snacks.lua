@@ -5,8 +5,8 @@ return {
         picker = {
             sources = {
                 explorer = {
-                    hidden = true
-                }
+                    hidden = true,
+                    win = { list = { keys = { ['<c-t>'] = 'tab' } } } },
             }
         },
         words = { enabled = true },
