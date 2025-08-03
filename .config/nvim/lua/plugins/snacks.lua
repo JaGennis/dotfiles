@@ -11,6 +11,7 @@ return {
                     focus = "list",
                     win = { list = { keys = { ['<Tab>'] = { "git_stage", mode = { "n", "i" } } } } }
                 },
+                notifications = { focus = "list" },
             }
         },
         words = { enabled = true },
