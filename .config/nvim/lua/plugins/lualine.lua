@@ -1,6 +1,5 @@
 return {
     'nvim-lualine/lualine.nvim',
-    dependenices = { "nvim-tree/nvim-web-devicons"},
     config = function()
         local original_onedark = require('lualine.themes.onedark')
         local custom_onedark = require('lualine.themes.onedark')
