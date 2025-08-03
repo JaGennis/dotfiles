@@ -8,6 +8,7 @@ return {
         {"<leader>hu", "<cmd>Gitsigns undo_stage_hunk<cr>", desc = "Undo stage hunk"},
         {"<leader>hr", "<cmd>Gitsigns reset_hunk<cr>", desc = "Reset hunk"},
         {"<leader>hp", "<cmd>Gitsigns preview_hunk<cr>", desc = "Preview hunk"},
+        {"<leader>hi", "<cmd>Gitsigns preview_hunk_inline<cr>", desc = "Preview hunk inline"},
         {"<leader>hS", "<cmd>Gitsigns stage_buffer<cr>", desc = "Stage buffer"},
         {"<leader>hR", "<cmd>Gitsigns reset_buffer<cr>", desc = "Reset buffer"},
         {"<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Toggle current line blame"},

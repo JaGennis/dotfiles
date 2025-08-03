@@ -10,6 +10,7 @@ return {
             }
         },
         words = { enabled = true },
+        notifier = { enabled = true },
     },
     keys = {
         { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer"},
