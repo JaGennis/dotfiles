@@ -5,6 +5,7 @@ return {
         {"]h", "<cmd>Gitsigns next_hunk<cr>", desc = "Jump to next hunk"},
         {"[h", "<cmd>Gitsigns prev_hunk<cr>", desc = "Jump to previous hunk"},
         {"<leader>hs", "<cmd>Gitsigns stage_hunk<cr>", desc = "Stage hunk"},
+        {"<leader>hs", function() require("gitsigns").stage_hunk({ vim.fn.line("."), vim.fn.line("v") }) end, mode = {"x"}},
         {"<leader>hu", "<cmd>Gitsigns undo_stage_hunk<cr>", desc = "Undo stage hunk"},
         {"<leader>hr", "<cmd>Gitsigns reset_hunk<cr>", desc = "Reset hunk"},
         {"<leader>hp", "<cmd>Gitsigns preview_hunk<cr>", desc = "Preview hunk"},
