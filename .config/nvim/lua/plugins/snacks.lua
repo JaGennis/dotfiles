@@ -7,6 +7,10 @@ return {
                 explorer = {
                     hidden = true,
                     win = { list = { keys = { ['<c-t>'] = 'tab' } } } },
+                git_status = {
+                    focus = "list",
+                    win = { list = { keys = { ['<Tab>'] = { "git_stage", mode = { "n", "i" } } } } }
+                },
             }
         },
         words = { enabled = true },
