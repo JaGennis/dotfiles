@@ -6,6 +6,8 @@ family = "Hack Nerd Font"
 
 [window]
 opacity = 0.9
+blur = true
+option_as_alt = "OnlyLeft"
 
 [general]
 import = ["$XDG_CONFIG_HOME/alacritty/one-dark.yaml"]
