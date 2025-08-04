@@ -51,6 +51,7 @@ return {
             { "<leader>co", "<cmd>CopilotChatOptimize<CR>",   desc = "Optimize selected code",     mode = { "n", "x" } },
             { "<leader>cd", "<cmd>CopilotChatDocs<CR>",       desc = "Document selected code",     mode = { "n", "x" } },
             { "<leader>cx", "<cmd>CopilotChatDiagnostic<CR>", desc = "Document selected code",     mode = { "n", "x" } },
+            { "<leader>ch", "<cmd>CopilotChatRewriteFunctional<CR>", desc = "Rewrite selected code in a functional style",     mode = { "n", "x" } },
         },
     },
 }

@@ -7,7 +7,7 @@ return {
   keys = {
       {"<leader>fo", function() vim.lsp.buf.format { async = true } end, desc = "Format buffer" },
       {"<leader>q", vim.diagnostic.setloclist, desc = "Show diagnostics" },
-      { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)"},
+      { "<leader>cs", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)"},
   },
   lazy = false,
   opts = {
