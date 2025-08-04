@@ -2,6 +2,7 @@ return {
     'saghen/blink.cmp',
     version = '1.*',
     -- build = 'cargo build --release',
+    dependencies = "fang2hou/blink-copilot",
     opts = {
         cmdline = {
             keymap = {
@@ -23,7 +24,7 @@ return {
             },
         },
         sources = {
-            default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+            default = { "lazydev", "lsp", "path", "snippets", "buffer", "copilot" },
             providers = {
                 lazydev = {
                     name = "LazyDev",
@@ -36,6 +37,12 @@ return {
                         if ctx.mode == 'cmdline' and string.find(ctx.line, ' ') == nil then return 3 end
                         return 0
                     end
+                },
+                copilot = {
+                    name = "copilot",
+                    module = "blink-copilot",
+                    score_offset = 100,
+                    async = true,
                 },
             },
         },
