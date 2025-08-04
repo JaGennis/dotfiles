@@ -24,7 +24,12 @@ return {
         dependencies = "nvim-lua/plenary.nvim",
         build = "make tiktoken",
         opts = {
-            -- See Configuration section for options
+            mappings = {
+                reset = {
+                    normal = "<C-x>",
+                    insert = "<C-x>",
+                }
+            }
         },
         keys = {
             { "<leader>cc", "<cmd>CopilotChatToggle<CR>",   desc = "Toggle copilot chat window", mode = { "n", "x" } },
@@ -35,7 +40,5 @@ return {
             { "<leader>co", "<cmd>CopilotChatOptimize<CR>", desc = "Optimize selected code",     mode = { "n", "x" } },
             { "<leader>cd", "<cmd>CopilotChatDocs<CR>",     desc = "Document selected code",     mode = { "n", "x" } },
         }
-        -- {"<leader>k", "<cmd>Lspsaga hover_doc<CR>", desc = "Show documentation"},
-        -- {"as", mode = {'o', 'x'}, function() require("various-textobjs").subword("outer") end, desc = "Outer subword"},
     },
 }
