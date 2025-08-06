@@ -18,3 +18,4 @@ alias rm="rm -vI"
 alias rsync="rsync -vrPlu"
 
 alias upgrade-gentoo="emerge --ask --verbose --update --deep --newuse @world"
+alias python="python3"
